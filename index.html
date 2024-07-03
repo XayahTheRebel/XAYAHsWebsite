@@ -2,14 +2,119 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>无序列表示例</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xayah's Website</title>
+    <style>
+        body 
+        {margin: 0;
+            height: 100vh;
+            background-color: gray;
+        }
+        .yinying{
+            box-shadow:inset 0 -3em 3em rgba(0, 0, 0, 0.1),
+    0 0 0 2px rgb(255, 255, 255),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+        }
+        .flex{
+            display: flex;
+        }
+        .baise{
+            background-color: white;
+        }
+        .flex1{
+            flex: 1;
+        }
+        .column{
+            flex-direction: column;
+        }
+        .mg8{
+            margin: 8px;
+        }
+        .mgr8{
+            margin-right: 8px;
+        }
+        .mgt8{
+            margin-top: 8px;
+        }
+        .mgb8{
+            margin-bottom: 8px;
+        }
+        .daohang{
+            padding: 10px 20px;
+            border-bottom: 1px solid #999;
+            font-size: 14px;
+            color: #666;
+        }
+        @media (max-width: 768px) {
+            .ceBian{
+                display: none;
+            }
+            .neirong{
+                flex-direction: row;
+            }
+            .shujuqu{
+                flex-direction: row;
+            }
+            .youqu{
+                margin-left: 8px;
+            }
+            .shujukuai{
+                margin: 0px 0px 8px;
+                flex: auto;
+            }
+            
+        }
+    </style>
 </head>
-<body>
-    <ul>
-        <li>项目一</li>
-        <li>项目二</li>
-        <li>项目三</li>
-    </ul>
+<body class="flex">
+    <!-- 侧边栏 -->
+    <div style="width: 200px;z-index: 2;" class="baise yinying">
+        <div style="padding: 10px;align-items: center;justify-content: center;border-bottom: 1px solid #999;" class="flex column">
+            <img src="https://img.alicdn.com/bao/uploaded/i1/232692832/O1CN01XERLVq1Wn6Sq5ufB4_!!232692832.jpg"
+             width="40px"height="40px" alt="头像">
+             <div>Aidon</div>
+        </div>
+        <!-- 导航栏 -->
+        <div class="flex1">
+            <div class="daohang">导航</div>
+            <div class="daohang">导航</div>
+            <div class="daohang">导航</div>
+            <div class="daohang">导航</div>
+            <div class="daohang">导航</div>
+        </div>
+    </div>
+    <!-- 主体内容 -->
+    <div style="overflow: auto;" class="flex1 flex column">
+        <!-- 头部栏 -->
+        <div style="height: 60px; z-index: 1;" class="baise yinying"></div>
+        <!-- 主体内容 -->
+        <div class="flex1 flex">
+            <!-- 左侧栏 -->
+            <div style="flex: 3;" class="flex column mg8">
+                <!-- 数据区域 -->
+                 <div class="flex">
+                    <!-- 数据块 -->
+                     <div style="height: 100px;" class="shujuqu flex1 baise mg8 yinying "></div>
+                     <div style="height: 100px;" class="shujuqu flex1 baise mg8 yinying "></div>
+                     <div style="height: 100px;" class="shujuqu flex1 baise mg8 yinying "></div>
+                     <div style="height: 100px;" class="shujuqu flex1 baise mg8 yinying "></div>
+                 </div>
+                <!-- 列表区域 --> 
+                 <div class="flex column mg8">
+                    <!-- 列表项 -->
+                     <div style="height: 160px;" class="baise mg8 yinying"></div>
+                     <div style="height: 160px;" class="baise mg8 yinying"></div>
+                 </div>
+            </div>
+            <!-- 右侧栏 -->
+            <div style="flex: 1;" class="youqu flex column">
+                <!-- 提示区域 -->
+                 <div style="height: 150px;" class="baise mg8 yinying">右侧栏内容</div>
+
+                <!-- 消息区 -->
+                 <div style="height: 300px;" class="baise mg8 yinying";>右侧栏内容</div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
- 
